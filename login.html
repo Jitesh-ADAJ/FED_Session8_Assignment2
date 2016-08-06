@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login.html</title>
+	<style>
+		#body{
+			text-align: center;
+		}
+
+
+	</style>
+</head>
+<body id="body">
+	
+			
+		<h2>MySelfieTech</h2>
+		<h4>Login</h4>
+		
+	<form method="post">
+	<div id= "para">
+		
+		
+		<input type="email"  placeholder="Email" name="email" id="email" autofocus> </br></br>
+		<input type="password" placeholder="password" name="password" id="password" ></br></br>
+		<button onclick="display()" >Submit</button>
+		<input type="submit" name="Back" value="Back" formaction="Assignment2.html">
+		
+	</div>
+	</form>
+
+	
+	<script>
+			
+		
+	function display()
+	{
+		
+
+		 var a1=document.getElementById("email").value;
+
+		 var a2=document.getElementById("password").value;
+	
+		if( (localStorage.getItem("Email")== a1) && (localStorage.getItem("Password")== a2))
+		{
+			
+			document.getElementById("para").innerHTML="";
+			window.location="HomePage.html";
+			
+
+		}
+		
+		else
+		{
+		
+			
+			document.getElementById("para").innerHTML= "Username or Password is incorrect....";
+					
+		}
+	}
+		
+	</script>
+		
+</body>
+</html>
