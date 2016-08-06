@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HomePage</title>
+	<style>
+		#body{
+
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body id="body">
+<p id="para"> </p>
+	<form method="post">
+	<input type="submit" name="Back" value="Log Out" formaction="Assignment2.html">
+	</form>
+<script>
+	var a = localStorage.getItem("name");
+	document.getElementById("para").innerHTML= "Wel Come....." + a;
+
+</script>
+</body>
+</html>
