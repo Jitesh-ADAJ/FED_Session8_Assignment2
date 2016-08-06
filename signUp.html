@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp.html</title>
+	<style>
+		#div1{
+			text-align: center;
+		}
+	</style>
+	<script>
+		
+		function myFun()
+		{
+			if (typeof(Storage) !== "undefined") 
+			{
+    		var x = document.getElementById("Username").value;
+	    	var y = document.getElementById("email").value;
+	    	var z = document.getElementById("password").value;
+	    	localStorage.setItem("name",x);
+	    	localStorage.setItem("Email", y);
+	    	localStorage.setItem("Password",z);
+	    	
+			} 
+			else 
+			{
+    		document.getElementById("div1").innerHTML = "Web Storage Paroblem...";
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	<div id=div1>
+			<form method="get">
+			<h2>MySelfieTech</h2>
+			<h4>Sign UP</h4>
+			<input type="text" placeholder="User name" name="Username" id="Username"  autofocus autocomplete="off"> </br></br>
+			<input type="email"  placeholder="Email" name="email" id="email"> </br></br>
+			<input type="password" placeholder="password" name="password" id="password"></br></br>
+			<button onclick ="myFun()"> Submit Query</button></br></br>
+			<input type="submit" name="Back" value="Back" formaction="Assignment2.html">
+		</form>
+		</div>
+	
+
+	</body>
+</html>
